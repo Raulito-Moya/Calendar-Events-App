@@ -68,7 +68,7 @@ const actualizarEventos = async(req, res = response) => {
        if ( evento.user.toString() !== uid ) { //si el id del usuario es diferente del usuario que viene en la peticion
            return res.status(401).json({
                ok: false,
-               msg: 'No tiene previlegio de eliminar este evento'
+               msg: 'No tiene previlegio de editar este evento'
            })
        }
 
@@ -117,7 +117,7 @@ const actualizarEventos = async(req, res = response) => {
         if ( evento.user.toString() !== uid ) { //si el id del usuario es diferente del usuario que viene en la peticion
             return res.status(401).json({
                 ok: false,
-                msg: 'No tiene previlegio de editar este evento'
+                msg: 'No tiene previlegio de eliminar este evento'
             })
         }
 
